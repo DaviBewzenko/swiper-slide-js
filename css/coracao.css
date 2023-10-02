@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2? family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+body{
+margin: 0;
+padding: 0;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #0b1522;
+}
+.heart{
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+}
+
+@keyframes heart {
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+.heart:before{
+
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    top: -58%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044;
+    
+}
+    .heart:after{  
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20844;
+    }
+    
+    h1 {
+    color:aliceblue;
+    text-align:center;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    vertical-align: bottom;
+    bottom: -100px;
+    right: 100px;
+    font-style: oblique;
+    margin-left: -1%;
+
+}
+
+
+

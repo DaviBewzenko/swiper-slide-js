@@ -1,0 +1,68 @@
+section{
+
+    text-align: center;
+}
+    .puntua{
+    
+    display: inline-block;
+    
+    padding: 20px;
+    
+    margin: 10px;
+    
+    background-color:#f5f5f5;
+    
+    border: 1px solid#e3e3e3;
+    
+    border-radius: 5px;
+    
+    box-shadow: 0 1px 1px gray;
+    
+    width: 200px;
+    
+    text-align: center;
+    
+    }
+    
+    .ranking{
+
+        font-size: 30px;
+    }
+        .ranking span.star {
+        
+        font-family: FontAwesome;
+        
+        font-weight: normal;
+        
+        font-style: normal;
+        
+        }
+        
+        .ranking span.star::before {
+        
+        content: "\f006";
+        
+        padding-right: 5px;
+        
+        color: #777;
+        
+        }
+        .ranking span.star:hover:before,
+
+        .ranking span.star:hover ~ span:before {
+        
+        content: "\f005";
+        
+        padding-right: 5px;
+        
+        color: rgb(255, 190, 68);
+        
+        }
+        
+        .ranking {
+        
+        unicode-bidi: bidi-override;
+        
+        direction: rtl;
+        
+        }

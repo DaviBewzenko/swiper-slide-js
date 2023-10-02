@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amo a luana</title>
+    <meta name="author" content="Vinícius Goulart">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/stylepresente.css">
+    <link rel="stylesheet" href="css/card.css">
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="nav_bar">
+            <a href="coracao.html" class="logo">DAVI & LUANA</a>        
+                <div class="navigation">
+                <div class="nav_items">
+                    <i class="uil uil-times nav_close_btn"></i>
+                    <a href="index.html"><i class="uil uil-home"></i>Principal</a>
+                    <a href="historia.html"><i class="uil uil-compass"></i>História</a>
+                    <a href="roteiro.html"><i class="uil uil-info-circle"></i>Roteiro</a>
+                    <a href="indexpresente.html"><i class="uil uil-document-layout-left"></i>Presente</a>
+                    <a href="projetando.html"><i class="uil uil-envelope"></i>Projetando</a>
+                </div>
+            </div>
+            <i class="uil uil-  apps nav_menu_btn"></i>
+        </div>
+    </header>
+
+    <section class="title">
+        <div class="container">
+            <div class="row">
+                <h1>Escolha um Card</h1>
+                <h2>O Card escolhido será um dos seus presentes de 1 ano</h2>
+                <h3>Boa sorte!</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p class="back-number">1</p>
+                            <img src="image/presente (2).png" class="gift-icon">
+                        </div>
+                        <div class="flip-card-back gift-option">
+                            <h1>Pix</h1>
+                            <img src="image/dinheiro.png" class="gift-icon">
+                            <p>R$ 100,00</p>
+                            <!-- Botão Detalhes -->
+                            <button class="btn-details" id="open-modal">Escolher</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p class="back-number">2</p>
+                            <img src="image/presente (2).png" class="gift-icon">
+                        </div>
+                        <div class="flip-card-back gift-option">
+                            <h1>Presente misterioso</h1>
+                            <img src="image/pergunta.png" class="gift-icon">
+                            <p></p>
+                            <!-- Botão Detalhes -->
+                            <button class="btn-details" id="open-modal">Escolher</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p class="back-number">3</p>
+                            <img src="image/presente (2).png" class="gift-icon">
+                        </div>
+                        <div class="flip-card-back gift-option">
+                            <h1>Bolsa / Roupa</h1>
+                            <img src="image/saia.png" class="gift-icon">
+                            <p>Você escolhe</p>
+                            <!-- Botão Detalhes -->
+                            <button class="btn-details" id="open-modal">Escolher</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        .gift-icon {
+            width: 100px;
+            height: 100px;
+            background-image: url('icone2.png'); /* Caminho para o ícone de presente */
+            background-size: cover;
+            position: relative;
+        }
+
+        .ribbon {
+            width: 20px;
+            height: 60px;
+            background-color: #ff69b4; /* Cor da fita do presente (rosa) */
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .bow {
+            width: 30px;
+            height: 30px;
+            background-color: #ff69b4; /* Cor do laço (rosa) */
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+
+        .box {
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff; /* Cor da caixa do presente */
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 2px solid #ff69b4; /* Cor da borda da caixa (rosa) */
+        }
+    </style>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="javascript/swiper-bundle.min.js"></script>
+    <script src="javascript/logika.js"></script>
+
+    
+</body>
+
+</html>

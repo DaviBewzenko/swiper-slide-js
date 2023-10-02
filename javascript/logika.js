@@ -1,3 +1,4 @@
+
 var swiper = new Swiper('.bg_slider_thumbs', {
     loop: true,
     spaceBetween: 0,
@@ -27,3 +28,15 @@ menuBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     navigation.classList.remove('active');
 });
+
+const stars = document.querySelectorAll('.stars i');
+
+// Quando um card é clicado
+$('.flip-card').click(function() {
+    // Remove a classe 'selected' de todos os cards
+    $('.flip-card').removeClass('selected');
+    
+    // Adiciona a classe 'selected' ao card clicado
+    $(this).addClass('selected');
+});
+

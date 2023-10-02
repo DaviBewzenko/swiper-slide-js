@@ -1,0 +1,96 @@
+/* Estilo para o número grande */
+.back-number {
+  font-size: 10rem;
+  position: absolute;
+  right: 10px;
+  top: -30px;
+  filter: opacity(80%);
+  color: #fff; /* Cor do número (branco) */
+  z-index: 1; /* Certifica-se de que o número esteja acima do card */
+}
+
+/* Estilo para o card */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 0px;
+}
+
+/* Estilo para o card (frente e verso) */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg) scale(1.02);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2); /* Transparente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Estilo para o botão Detalhes */
+.btn-details {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease; /* Adiciona uma transição suave a todas as propriedades */
+  margin-top: 20px;
+}
+
+/* Quando o mouse passar sobre o botão */
+.btn-details:hover {
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+  background-color: #00ccff; /* Altera a cor de fundo */
+  color: #fff; /* Altera a cor do texto */
+  box-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff; /* Adiciona uma sombra */
+}
+
+/* Estilo Neon ao passar o mouse */
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+  animation: neon 1s infinite alternate;
+  border: 3px solid #00ccff; /* Cor do neon (azul claro) */
+  box-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff; /* Efeito de sombra neon */
+}
+
+@keyframes neon {
+  from {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
+      border: 3px solid #00ccff;
+      box-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff;
+  }
+  to {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.9);
+      border: 3px solid #ffffff; /* Cor do neon (branco) */
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Efeito de sombra neon */
+  }
+}
+
+

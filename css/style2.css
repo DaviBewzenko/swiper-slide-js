@@ -1,0 +1,71 @@
+
+.rating-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 40px;
+    border: solid 5px transparent;
+    background-clip: padding-box;
+    box-shadow: 0 10px 10px rgba(46, 54, 68, .1);
+    }
+    .rating-box h1 {
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    }
+    .rating-box p {
+    font-size: 15px;
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+    }
+    .rating-box .stars {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+   
+    }
+    .rating-box .stars i {
+    color: white;
+    color: var(--yellow);
+    font-size: 40px;
+    cursor: pointer;
+    transition: color .2s ease;
+    margin-bottom: 60px;
+
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+    transform: scale(1);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+    .rating-box .stars i.active {
+    color: var(--yellow);
+    
+    }

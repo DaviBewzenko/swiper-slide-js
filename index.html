@@ -4,92 +4,131 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <title>Responsive | Landing Page</title>
+    <title>amo a luana</title>
 </head>
 
 <body>
     <header>
         <div class="nav_bar">
-            <a href="" class="logo">nature</a>
+            <a href="coracao.html" class="logo">DAVI & LUANA</a>            
             <div class="navigation">
                 <div class="nav_items">
                     <i class="uil uil-times nav_close_btn"></i>
-                    <a href="#"><i class="uil uil-home"></i>Home</a>
-                    <a href="#explore"><i class="uil uil-compass"></i>Explore</a>
-                    <a href="#"><i class="uil uil-info-circle"></i>About</a>
-                    <a href="#"><i class="uil uil-document-layout-left"></i>Blog</a>
-                    <a href="#"><i class="uil uil-envelope"></i>Contact</a>
+                    <a href="index.html"><i class="uil uil-home"></i>Principal</a>
+                    <a href="historia.html"><i class="uil uil-compass"></i>História</a>
+                    <a href="roteiro.html"><i class="uil uil-info-circle"></i>Roteiro</a>
+                    <a href="indexpresente.html"><i class="uil uil-document-layout-left"></i>Presente</a>
+                    <a href="projetando.html"><i class="uil uil-envelope"></i>Projetando</a>
                 </div>
             </div>
             <i class="uil uil-apps nav_menu_btn"></i>
         </div>
     </header>
-
+    
     <section class="home">
-        <div class="media_icons">
-            <a href="#"><i class="uil uil-twitter"></i></a>
-            <a href="#"><i class="uil uil-instagram"></i></a>
-            <a href="#"><i class="uil uil-github"></i></a>
-        </div>
+
         <div class="swiper bg_slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="image/forest.jpg" alt="">
+                    <img src="image/ftnois.jpg" alt="">
                     <div class="text_content">
-                        <h2 class="title">Plant <span>Season</span></h2>
+                        <h2 class="title">NOSSA <span>HISTÓRIA</span></h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat vero velit nesciunt
-                            pariatur dolorum tempora voluptate, reprehenderit voluptatibus eligendi saepe ut, omnis sint
-                            sapiente illum! Repellendus aperiam, dolorum delectus minima laborum id error optio
-                            consequuntur atque?
+                            Um pouquinho sobre nós, nossa história, nossos momentos, claro que não tem espaço para retratar tudo oque a gente ja viveu, por que amanhã ja faz um ano e realmente ao seu lado tudo passou muito rápido, tipo quando tem uma aula boa e o tempo voa, estou ansioso por mais anos ao seu lado.
                         </p>
-                        <button class="read_btn">Read More <i class="uil uil-arrow-right"></i></button>
+                        <a href="historia.html">
+        <button class="read_btn" onclick="redirectToHistoria()">Ver sobre <i class="uil uil-arrow-right"></i></button>
+                        </a>
+                        <script>
+                            function redirectToHistoria() {
+                                // Exibe a tela de loading
+                                showLoadingScreen();
+                        
+                                // Carrega o conteúdo da história
+                                fetch("historia.html")
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        // Aguarda 2 segundos antes de redirecionar (simulando o carregamento do conteúdo)
+                                        setTimeout(function () {
+                                            // Esconde a tela de loading
+                                            hideLoadingScreen();
+                        
+                                            // Exibe o conteúdo da história
+                                            showHistoryContent(data);
+                                        }, 5000); // 2 segundos
+                                    })
+                                    .catch(error => {
+                                        console.error("Erro ao carregar a história:", error);
+                                        // Em caso de erro, esconda a tela de loading
+                                        hideLoadingScreen();
+                                    });
+                            }
+                        
+                            function showLoadingScreen() {
+                                // Cria a div de tela de loading e a adiciona ao corpo do documento
+                                var loadingScreen = document.createElement("div");
+                                loadingScreen.className = "loading-screen";
+                                loadingScreen.innerHTML = '<div class="loader"></div>';
+                                document.body.appendChild(loadingScreen);
+                            }
+                        
+                            function hideLoadingScreen() {
+                                // Remove a tela de loading do corpo do documento
+                                var loadingScreen = document.querySelector(".loading-screen");
+                                if (loadingScreen) {
+                                    loadingScreen.parentNode.removeChild(loadingScreen);
+                                }
+                            }
+                        
+                            function showHistoryContent(content) {
+                                // Crie um elemento para exibir o conteúdo da história
+                                var historyContainer = document.createElement("div");
+                                historyContainer.className = "history-container";
+                                historyContainer.innerHTML = content;
+                        
+                                // Adicione o conteúdo da história ao corpo do documento
+                                document.body.appendChild(historyContainer);
+                            }
+                        </script>
                     </div>
                 </div>
                 <div class="swiper-slide dark_layer">
-                    <img src="image/nature.jpg" alt="">
+                    <img src="image/peçasft.jpg" alt="">
                     <div class="text_content">
-                        <h2 class="title">Sunrise <span>Forest</span></h2>
+                        <h2 class="title">ROTEIRO <span>Desse fim de semana</span></h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat vero velit nesciunt
-                            pariatur dolorum tempora voluptate, reprehenderit voluptatibus eligendi saepe ut, omnis sint
-                            sapiente illum! Repellendus aperiam, dolorum delectus minima laborum id error optio
-                            consequuntur atque?
+                            Roteiro doque fazer nos finais de semanas ou dias comemorativos, aonde tem detalhadamente oque nós vamos fazer, lugares que vamos, mas claro, as surpresas não estão inclusas, basicamente oque nós vamos fazer, roupas que eu quero que você vá, lugar aonde você vai ter acesso logo. 
                         </p>
-                        <button class="read_btn">Read More <i class="uil uil-arrow-right"></i></button>
+                        <button class="read_btn">Ver sobre <i class="uil uil-arrow-right"></i></button>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="image/lighting.jpg" alt="">
+                    <img src="image/igrejaft.jpg" alt="">
                     <div class="text_content">
-                        <h2 class="title">Lightning <span>Purple</span></h2>
+                        <h2 class="title">ESPECIALMENTE <span>PARA VOCÊ</span></h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat vero velit nesciunt
-                            pariatur dolorum tempora voluptate, reprehenderit voluptatibus eligendi saepe ut, omnis sint
-                            sapiente illum! Repellendus aperiam, dolorum delectus minima laborum id error optio
-                            consequuntur atque?
+                            Essa daqui pode ser uma das melhores partes desse presente para você, aqui você vai escolher presentes que você vai ganhar, simplesmente clicando em um botão e puff, seu desejo vai ser realizado, claro que sou eu quem escolho oque eu quero dar, mas no fim eu sempre sei oque você quer.
                         </p>
-                        <button class="read_btn">Read More <i class="uil uil-arrow-right"></i></button>
+                        <a href="indexpresente.html">
+                            <button class="read_btn" onclick="redirectToPresente()">Ver sobre <i class="uil uil-arrow-right"></i></button>
+                                            </a>
                     </div>
                 </div>
                 <div class="swiper-slide dark_layer">
-                    <img src="image/ocean.jpg" alt="">
+                    <img src="image/estatua.jpg" alt="">
                     <div class="text_content">
-                        <h2 class="title">Ocean <span>Sunset</span></h2>
+                        <h2 class="title">NOSSA GALERIA <span>muitas fotos</span></h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat vero velit nesciunt
-                            pariatur dolorum tempora voluptate, reprehenderit voluptatibus eligendi saepe ut, omnis sint
-                            sapiente illum! Repellendus aperiam, dolorum delectus minima laborum id error optio
-                            consequuntur atque?
+                            Aqui tem um pouco de nós, muitas das fotos tem significados, momentos nossos, que só nós conseguimos explicar, antigamente nós colocavámos a culpa no destino, mas hoje em dia acredito que é só nos fazendo acontecer, você me querendo tanto, da para ver até pelas fotos, eu amo o jeito que você me ama e sempre me quer por perto, essa galeria é para retratar esses momentos.
                         </p>
-                        <button class="read_btn">Read More <i class="uil uil-arrow-right"></i></button>
+                        <button class="read_btn">Ver sobre <i class="uil uil-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -97,10 +136,10 @@
 
         <div class="bg_slider_thumbs">
             <div class="swiper-wrapper thumbs_container">
-                <img src="image/forest.jpg" class="swiper-slide">
-                <img src="image/nature.jpg" class="swiper-slide">
-                <img src="image/lighting.jpg" class="swiper-slide">
-                <img src="image/ocean.jpg" class="swiper-slide">
+                <img src="image/ftnois.jpg" class="swiper-slide">
+                <img src="image/peçasft.jpg" class="swiper-slide">
+                <img src="image/igrejaft.jpg" class="swiper-slide">
+                <img src="image/estatua.jpg" class="swiper-slide">
             </div>
         </div>
         </div>
@@ -108,25 +147,23 @@
 
     <section class="about" id="explore">
         <div class="details">
-            <h2>Explore</h2>
+            <h2 class="title">Ainda é só o começo</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, vel quidem. Unde, temporibus incidunt
-                repellendus eligendi minus magni quisquam quae et, deleniti ea nemo aliquam. Accusamus ipsa harum,
-                molestiae dignissimos tempore unde. Culpa in illum, saepe eos ab quae aut.
+                Tem muitas coisas nessa vida que eu quero fazer com você, uma delas, o meu objetivo a vida inteira, vai ser fazer você feliz e trazer momentos felizes, maravilhosos e ótimos para nós, aqui em baixo, coloquei alguns lugares que quero ir com você, depois de comprarmos nossa casa e morarmos juntos, se prepare, está perto.
             </p>
         </div>
         <div class="image_gallery">
             <div class="image_card">
-                <img src="image/grid1.jpg" data-aos="fade-up" data-aos-delay="100">
+                <img src="image/newyork.jpg" data-aos="fade-up" data-aos-delay="100">
             </div>
             <div class="image_card">
-                <img src="image/grid2.jpg" data-aos="fade-up" data-aos-delay="400">
+                <img src="image/suiça (2).jpg" data-aos="fade-up" data-aos-delay="400">
             </div>
             <div class="image_card">
-                <img src="image/grid3.jpg" data-aos="fade-up" data-aos-delay="700">
+                <img src="image/madrid.jpg" data-aos="fade-up" data-aos-delay="700">
             </div>
             <div class="image_card">
-                <img src="image/grid4.jpg" data-aos="fade-up" data-aos-delay="1000">
+                <img src="image/italia.jpg" data-aos="fade-up" data-aos-delay="1000">
             </div>
         </div>
 
@@ -139,6 +176,24 @@
 
     <script src="javascript/swiper-bundle.min.js"></script>
     <script src="javascript/logika.js"></script>
+
+<div class="divmain" style=" background-color: var(--dark-color)">
+    <div class="rating-box" style="background-color: var(--dark-color)">
+            <h1>Me dê uma nota</h1>
+            <p>O que achou do presente, ele merece nota 5?</p>
+            <div class="stars">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <script src="javascript/script.js"></script>
+            </div>
+    </div>
+    
+</div> 
+<script src="javascript/script.js"></script>
+
 </body>
 
 </html>
